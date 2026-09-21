@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="html.css">
+    <link rel="shortcut icon" href="Logo.png">
+</head>
+<body>
+    <nav class="navigation">
+        <a href="#" class="logo">
+            <img src="Logo.png" alt="Lush Aura"/>
+        </a>
+        <div class="nav-menu">
+            <a href="home.html" class="active">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Categories</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <form class="search-box">
+            <input type="text" placeholder="Search..." required/>
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <div class="nav-buttons">
+            <a href="login.html" class="nav-user">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <a href="#" class="nav-wishlist">
+                <i class="fa-solid fa-heart"></i>
+            </a>
+            <a href="cart.html" class="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Add to Cart Section -->
+    <section class="cart">
+        <h1>Your Shopping Cart</h1>
+        <div class="cart-container">
+            <div class="cart-item" data-id="1">
+                <img src="product1.jpg" alt="Product 1">
+                <div class="cart-details">
+                    <h3>Product Name</h3>
+                    <p>$25.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="quantity-container">
+                        <span>Quantity:</span>
+                        <span class="quantity">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-item" data-id="2">
+                <img src="product2.jpg" alt="Product 2">
+                <div class="cart-details">
+                    <h3>Another Product</h3>
+                    <p>$15.00</p>
+                    <button class="Add-to-cart">Add to Cart</button>
+                    <div class="quantity-container">
+                        <span>Quantity:</span>
+                        <span class="quantity">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const cartItem = this.closest('.cart-item');
+                const quantitySpan = cartItem.querySelector('.quantity');
+                let currentQuantity = parseInt(quantitySpan.textContent);
+                quantitySpan.textContent = currentQuantity + 1;
+            });
+        });
+    </script>
+</body>
+</html>
+
+

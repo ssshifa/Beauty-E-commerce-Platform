@@ -1,0 +1,242 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Header Section */
+header {
+    display: flex;               /* Use Flexbox layout */
+    justify-content: space-between; /* Ensure space between breadcrumb and cart icon */
+    align-items: center;          /* Vertically center the items */
+    padding: 10px 20px;           /* Adjust padding */
+    background-color: #fff;       /* Optional background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Small shadow for the header */
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #9a5c7c;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #e386b8;
+    text-decoration: underline;
+}
+
+/* Cart Icon Styles */
+.cart-icon {
+    display: flex;                /* Flexbox for cart icon and quantity */
+    flex-direction: column;        /* Stack cart icon and quantity vertically */
+    align-items: center;          /* Center cart icon and quantity */
+    position: relative;           /* Position relative for absolute positioning of quantity */
+}
+
+.cart-icon i {
+    font-size: 1.5rem;            /* Adjust the size of the cart icon */
+    color: #333;                  /* Set color for the cart icon */
+    cursor: pointer;             /* Change cursor to pointer when hovering */
+}
+
+.totalQuantity {
+    position: absolute;
+    top: -5px;                    /* Position the quantity above the cart icon */
+    right: -5px;                  /* Position the quantity to the right of the cart icon */
+    background-color: #e74c3c;    /* Red background for the quantity badge */
+    color: white;                 /* White text */
+    padding: 5px 8px;             /* Padding for the quantity badge */
+    border-radius: 50%;           /* Make it round */
+    font-size: 0.9rem;            /* Font size for the quantity */
+    min-width: 20px;              /* Minimum width of the badge */
+    min-height: 20px;             /* Minimum height of the badge */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Optional: Add hover effect for cart icon */
+.cart-icon:hover {
+    cursor: pointer;             /* Change cursor to pointer */
+}
+
+
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #e386b847;
+    border-right: 2px solid transparent;
+}
+
+.filter label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.filter select, .filter input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #cca3bd;
+}
+
+.filter button {
+    width: 100%;
+    padding: 10px;
+    background-color: #9a5c7c;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.filter button:hover {
+    background-color: #cca3bd;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: calc(100% - 280px);
+    padding: 20px;
+    max-width: 1000px;
+}
+
+.product {
+    background: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product h4 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 14px;
+    color: #555;
+}
+
+.product button {
+    background-color: #af6d95;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #cca3bd;
+    color: black;
+}
+
+.product {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 105, 180, 0.4); /* Pink glow effect */
+}
+
+
+.add-to-cart {
+    padding: 8px;
+    width: 100%;
+    background-color: #af6d95;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: #9a5c7c;
+}
+
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cart-modal h3 {
+    margin-top: 0;
+}
+
+#closeCart {
+    width: 100%;
+    padding: 10px;
+    background-color: #af6d95;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#closeCart:hover {
+    background-color: #9a5c7c;
+}
+
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #cca3bd;
+    color: white;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 30px; /* Icon size */
+    color: white; /* Icon color */
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #e386b8; /* Hover color */
+}
+
+
+

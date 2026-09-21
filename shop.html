@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="Logo.png">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    
+    <header>
+        <div class="breadcrumb">
+            <a href="home.html">Home</a> > <span>Shop</span>
+        </div>
+        <div class="cart-icon">
+            <i class="fa fa-shopping-cart"></i>
+            <div class="totalQuantity">0</div>
+        </div>
+    </header>
+
+    
+
+    <div class="container">
+        <!-- Sidebar with filters -->
+        <div class="sidebar">
+            <h3>Filters</h3>
+            <form id="filtersForm">
+                <!-- Categories Filter -->
+                <div class="filter">
+                    <label for="category">Categories</label>
+                    <select id="category" name="category" multiple>
+                        <option value="skincare">Skincare</option>
+                        <option value="makeup">Makeup</option>
+                        <option value="haircare">Haircare</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="fragrances">Fragrances</option>
+                    </select>
+                </div>
+
+                <!-- Price Range Filter -->
+                <div class="filter">
+                    <label for="price">Price Range</label>
+                    <input type="range" id="priceRange" name="price" min="0" max="6000" value="6000" step="10">
+                    <span id="priceValue">৳6000</span>
+                </div>
+
+                <!-- Rating Filter -->
+                <div class="filter">
+                    <label for="rating">Rating</label>
+                    <select id="rating" name="rating">
+                        <option value="all">All</option>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars & up</option>
+                        <option value="3">3 Stars & up</option>
+                    </select>
+                </div>
+
+                <!-- Search Filter -->
+                <div class="filter">
+                    <label for="search">Search Products</label>
+                    <input type="text" id="search" name="search" placeholder="Search products...">
+                </div>
+
+                <!-- Clear Filters Button -->
+                <div class="filter">
+                    <button type="button" id="clearFilters">Clear</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products">
+          
+        <div class="product" data-category="skincare" data-price="2200" data-rating="5">
+            <img src="ord.jpg" alt="Lactic Acid">
+            <h4>The Ordinary Lactic Acid (30ml)</h4>
+            <p>৳2200</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product" data-category="makeup" data-price="1800" data-rating="5">
+            <img src="kyl3.jpg" alt="Gloss">
+            <h4>Kylie Cosmetics Super Glitter Gloss Milk & Cookies</h4>
+            <p>৳1800</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        
+        <div class="product" data-category="skincare" data-price="2200" data-rating="4">
+            <img src="boj2.jpg" alt="Rice Toner">
+            <h4>Beauty Of Joseon Rice Milk Toner (150ml)</h4>
+            <p>৳2200</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product" data-category="makeup" data-price="1300" data-rating="5">
+            <img src="fk8.jpg" alt="">
+            <h4>Flower Knows Strawberry Cupid Pressed Powder</h4>
+            <p>৳1300</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product" data-category="makeup" data-price="3000" data-rating="5">
+            <img src="benetint.jpg" alt="Lip Stain">
+            <h4>Benefit Benetint Cheek and Lip Stain (6ml)</h4>
+            <p>৳3000</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        
+        <div class="product" data-category="skincare" data-price="950" data-rating="5">
+            <img src="lotiol.jpg" alt="Body Oil">
+            <h4>Vaseline Cocoa Radiant Body Oil (200ml)</h4>
+            <p>৳950</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product" data-category="fragrances" data-price="950" data-rating="5">
+            <img src="romantic victoria's secret.jpg" alt="VS Body Mist">
+            <h4>Victoria's Secret Romantic Fragrance Body Mist (250ml)</h4>
+            <p>৳950</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+    
+        <div class="product" data-category="skincare" data-price="1500" data-rating="3">
+            <img src="ord1.jpg" alt="Peeling solution">
+            <h4>The Ordinary Peeling Solution (30ml)</h4>
+            <p>৳1500</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        
+
+        
+        <div class="product" data-category="skincare" data-price="1400" data-rating="4">
+            <img src="ord3.jpg" alt="Hyaluronic Acid">
+            <h4>The Ordinary Hyaluroic Acid (30ml)</h4>
+            <p>৳1400</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+            
+            <div class="product" data-category="skincare" data-price="1800" data-rating="3">
+                <img src="boj1.jpg" alt="Dynasty Cream">
+                <h4>Beauty Of Joseon Dynasty Cream (50ml) </h4>
+                <p>৳1800</p>
+                <p class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </p> 
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="makeup" data-price="1100" data-rating="4">
+                <img src="benefit.jpg" alt="Benefit Brow Setter">
+                <h4>Benefit 24-Hour Brow Setter (7ml)</h4>
+                <p>৳1100</p>
+                <p class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </p> 
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+    
+            <div class="product" data-category="accessories" data-price="100" data-rating="5">
+                <img src="ac1.jpg" alt="Shower Loofah">
+                <h4>Loofah Sponge For Bathing</h4>
+                <p>৳100</p>
+                <p class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </p> 
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="haircare" data-price="250" data-rating="5">
+                <img src="hc4.jpg" alt="Parachute Oil">
+                <h4>Parachute Advanced Aloe Vera Enriched Coconut Hair Oil (250ml)</h4>
+                <p>৳250</p>
+                <p class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </p> 
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="makeup" data-price="1450" data-rating="3">
+                <img src="rb1.jpg" alt="lip souffle">
+                <h4>Rare Beauty Lip Souffle Matte Cream Lipstick</h4>
+                <p>৳1450</p>
+                <p class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </p> 
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            
+            <div class="product" data-category="skincare" data-price="1600" data-rating="5">
+                <img src="boj3.jpg" alt="Sunscreen">
+                <h4>Beauty Of Joseon Relief Sun SPF50+ (70ml)</h4>
+                <p>৳1600</p>
+                <p class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </p> 
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="makeup" data-price="850" data-rating="3">
+                <img src="nars1.jpg" alt="Nars Conditioner">
+                <h4>NARS Radiant Creamy Concealer</h4>
+                <p>৳850</p>
+                <p class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </p> 
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product" data-category="skincare" data-price="4800" data-rating="5">
+                <img src="bestseller3.jpg" alt="Lactic Acid">
+                <h4>CeraVe Hydrating Facial Cleanser (473ml)</h4>
+                <p>৳4800</p>
+                <p class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </p> 
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+    
+            <div class="product" data-category="accessories" data-price="50" data-rating="5">
+                <img src="sponge.jpg" alt="SPonge">
+                <h4>Triangle Sponge</h4>
+                <p>৳50</p>
+                <p class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </p> 
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            
+            <div class="product" data-category="skincare" data-price="1400" data-rating="4">
+                <img src="boj4.jpg" alt="Serum">
+                <h4>Bauty Of Joseon Glow Deep Serum (30ml)</h4>
+                <p>৳1400</p>
+                <p class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </p> 
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+              
+
+
+        <div class="product" data-category="makeup" data-price="1000" data-rating="5">
+            <img src="bestseller1.jpg" alt="Sheglam Lipstick">
+            <h4> SHEGLAM Dynamatte Boom Long Lasting Matte Lipstick</h4>
+            <p>৳1000</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        
+        <div class="product" data-category="fragrances" data-price="1800" data-rating="5">
+            <img src="Victoria's Secret Love Spell Mist & Lotion Set.jpg" alt="VS Body Mist">
+            <h4>Victoria's Secret Love Spell Mist & Lotion Set</h4>
+            <p>৳1800</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+       
+
+        <div class="product" data-category="haircare" data-price="1800" data-rating="5">
+            <img src="bestseller2.jpg" alt="Kind Words">
+            <h4>Mielle Rosemary Mint Scalp & Hair Strengthening Oil</h4>
+            <p>৳1800</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        
+
+       
+        <div class="product" data-category="makeup" data-price="2200" data-rating="3">
+            <img src="rb3.jpg" alt="Prime & Mist">
+            <h4>Rare Beauty 4 in 1 Prime & Set Mist</h4>
+            <p>৳2200</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        
+         <div class="product" data-category="skincare" data-price="4800" data-rating="5">
+            <img src="gr1.jpg" alt="Cleanser">
+            <h4>Glow Recipe Blueberry Bounce Gentle Cleanser (160ml)</h4>
+            <p>৳4800</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        
+        
+        
+        
+        <div class="product" data-category="makeup" data-price="3200" data-rating="4">
+            <img src="fk4.jpg" alt="Eyeshadow Palette">
+            <h4>Flower Knows Moonlight Mermaid 5 Colour Eyeshadow Palette</h4>
+            <p>৳60</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product" data-category="fragrances" data-price="800" data-rating="5">
+            <img src="So…_ Summer Escapes Womens Bali Breeze Body Mist Fragrance Spray 200ml.jpg" alt=" Body Mist">
+            <h4>So…? Summer Escapes Womens Bali Breeze Body Mist Fragrance Spray (200ml)</h4>
+            <p>৳800</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+       
+        <div class="product" data-category="skincare" data-price="3500" data-rating="5">
+            <img src="gr3.jpg" alt="Eye Cream">
+            <h4>Glow Recipe Guava Vitamin C Bright-Eye Gel Cream (15ml)</h4>
+            <p>৳3500</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product" data-category="makeup" data-price="2500" data-rating="5">
+            <img src="rb2.jpg" alt="Primer">
+            <h4>Rare Beauty Illuminating Primer</h4>
+            <p>৳2500</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+       
+      
+
+        <div class="product" data-category="skincare" data-price="1900" data-rating="5">
+            <img src="ord2.jpg" alt="Glycolic Acid">
+            <h4>The Ordinary Glycolic Acid (100ml)</h4>
+            <p>৳1900</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        
+        <div class="product" data-category="makeup" data-price="1800" data-rating="4">
+            <img src="rb.jpg" alt="Kind Words">
+            <h4>Rare Beauty Kind Words Matte Lipstick</h4>
+            <p>৳1800</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        
+        <div class="product" data-category="accessories" data-price="1100" data-rating="3">
+            <img src="fk2.jpg" alt="Blusher">
+            <h4>Flower Knows Swan Ballet Series Powder Blusher</h4>
+            <p>৳1100</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+    
+        <div class="product" data-category="makeup" data-price="3500" data-rating="5">
+            <img src="kyl1.jpg" alt="lipstick set">
+            <h4>Kylie Costmetics Send Me More Nudes Velvet Liquid Matte Lipstick Set</h4>
+            <p>৳3500</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+       
+        
+
+        
+        <div class="product" data-category="makeup" data-price="1700" data-rating="5">
+            <img src="fk7.jpg" alt="">
+            <h4>Flower Knows Strawberry Cupid Cake Lip Cream</h4>
+            <p>৳1700</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+       
+
+       
+        <div class="product" data-category="makeup" data-price="2800" data-rating="3">
+            <img src="kyl4.jpg" alt="Lip Set">
+            <h4>Kylie Cosmetics - Valentines Collection The Soulmet Set</h4>
+            <p>৳2800</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product" data-category="fragrances" data-price="2200" data-rating="4">
+            <img src="fk5.jpg" alt="">
+            <h4>Flower Knows Strawberry Cupid Perfume</h4>
+            <p>৳2200</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        
+          <div class="product" data-category="makeup" data-price="1500" data-rating="4">
+            <img src="kyl5.jpg" alt="">
+            <h4>Kylie Cosmetics High Gloss</h4>
+            <p>৳1500</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+               
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+ 
+        <div class="product" data-category="makeup" data-price="1600" data-rating="5">
+            <img src="kyl6.jpg" alt="">
+            <h4>Kylie Cosmetics Pressed Blush Powder</h4>
+            <p>৳1600</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="product" data-category="skincare" data-price="5400" data-rating="5">
+            <img src="gr4.jpg" alt="Toner">
+            <h4>Glow Recipe Watermelon Glow PHA+BHA Pore-Tight Toner (150ml)</h4>
+            <p>৳5400</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+     
+         <div class="product" data-category="makeup" data-price="2800" data-rating="5">
+            <img src="fk1.jpg" alt="Lip lacquer">
+            <h4>Flower Knows Midsummer Fairytales Coating Lip Lacquer</h4>
+            <p>৳2800</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+       
+
+        <div class="product" data-category="accessories" data-price="1200" data-rating="5">
+            <img src="fk3.jpg" alt="Mirror">
+            <h4>Flower Knows Midsummer Fairytales Handheld Makeup Mirror</h4>
+            <p>৳1200</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+
+        <div class="product" data-category="skincare" data-price="4500" data-rating="3">
+            <img src="gr2.jpg" alt="Body cream">
+            <h4>Glow Recipe Watermelon Glow Pink Dream Body Cream (240ml)</h4>
+            <p>৳4500</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+         
+
+     
+        <div class="product" data-category="accessories" data-price="900" data-rating="5">
+            <img src="fk6.jpg" alt="">
+            <h4>Flower Knows Swan Ballet Series Hair Brush</h4>
+            <p>৳900</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+  
+        <div class="product" data-category="makeup" data-price="3000" data-rating="4">
+            <img src="kyl2.jpg" alt="Eyeshadow">
+            <h4>Kylie Cosmetics The Valentine Day Eyeshadow Palette - 12 Colours</h4>
+            <p>৳3000</p>
+            <p class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </p> 
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+       
+       
+
+
+
+
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <h3>Your Cart</h3>
+        <div id="cartItems"></div>
+        <p>Total: ৳<span id="cartTotal">0</span></p>
+        <button id="closeCart">Close</button>
+    </div>
+
+    <!-- Footer with Social Media Links -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook-f"></i> <!-- Facebook icon -->
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+            </a>
+        </div>
+
+        <!-- Copyright Notice -->
+        <p>Copyright © 2025 LushAura. All Rights Reserved. By Shifa,Mithila & Oni.</p>
+    </footer>
+
+    <script src="shop.js"></script>
+</body>
+</html>

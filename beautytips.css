@@ -1,0 +1,121 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff0f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .headline {
+    text-align: center;
+    color: #5a3537;
+    margin-bottom: 30px;
+  }
+  .home-btn {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #cca3bd;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-btn:hover {
+    background-color: #5a3537;
+  }
+  
+  
+  .tips-section {
+    margin: 40px 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  }
+  
+  .tips-section h2 {
+    color: #af6d95;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  .section-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  }
+  
+  /* Animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .upbuttons {
+    position: fixed;
+    bottom: 20px;  
+    right: 20px;   
+    z-index: 1000; 
+    
+}
+
+#goUp {
+    background-color: transparent; 
+    color: #914b6d;               
+    font-size: 1rem;            
+    padding: 10px 20px;         
+    border: none;               
+    border-radius: 50%;        
+    cursor: pointer;           
+    transition: background-color 0.3s ease; 
+}
+
+#goUp:hover {
+    background-color: #cca3bd88; 
+}
+  
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #cca3bd;
+    color: white;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 30px; /* Icon size */
+    color: white; /* Icon color */
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #e386b8; /* Hover color */
+}
+
+  

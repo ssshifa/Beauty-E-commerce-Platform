@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="Logo.png" alt="Lush Aura" />
+            </div>
+            
+            <nav class="navigation">
+                <a href="home.html">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Categories</a>
+                <a href="contactuspage.html">Contact Us</a>
+                
+    
+            </nav>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="window.location.href='trial.html'">Login</button>
+                <button class="btn" id="registerBtn" onclick="window.location.href='trial2.html'">Register</button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+
+
+    <div class="container" id="register">
+        <div class="drop">
+            <div class="content">
+                <h2>Register</h2>
+                <form>
+                    <div class="input">
+                        <input type="text" name="first_name" placeholder="First Name" required>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="last_name" placeholder="Last Name" required>
+                    </div>
+                    <div class="input">
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="input">
+                        <input type="submit" value="Register">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <a href="login.html" class="btnn">Already have an account?</a>
+        
+    </div>
+
+    
+
+    <!--Javascript functions-->
+
+<script>
+   
+    function myMenuFunction() {
+     var i = document.getElementById("navMenu");
+ 
+     if(i.className === "nav-menu") {
+         i.className += " responsive";
+     } else {
+         i.className = "nav-menu";
+     }
+    }
+  
+ </script>
+ 
+ <script>
+ 
+     var a = document.getElementById("loginBtn");
+     var b = document.getElementById("registerBtn");
+     var x = document.getElementById("login");
+     var y = document.getElementById("register");
+ 
+     function login() {
+         x.style.left = "4px";
+         y.style.right = "-520px";
+         a.className += " white-btn";
+         b.className = "btn";
+         x.style.opacity = 1;
+         y.style.opacity = 0;
+     }
+ 
+     function register() {
+
+         x.style.left = "-520px";
+         y.style.right = "5px";
+         a.className = "btn";
+         b.className += " white-btn";
+         x.style.opacity = 0;
+         y.style.opacity = 1;
+     }
+ 
+ </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confession</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fefefe;
+      padding: 30px;
+      text-align: center;
+    }
+    .confession {
+      border: 2px solid #ccc;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .accept {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .reject {
+      background-color: #f44336;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<div class="confession">
+  <h2>🎉 Congratulations Faiza Mehjabin, you get what you want! 🏆🎉</h2>
+  <p>I saw you for the first time in a Facebook comment.</p>
+  <p>When I saw you, I was fully blank.</p>
+  <p>I want to tell you that I feel ❤️ with you.</p>
+  <p>Everything is possible 😀</p>
+  <p>May you accept me?</p>
+  <div class="buttons">
+    <button class="accept" onclick="handleResponse('accept')">Accept</button>
+    <button class="reject" onclick="handleResponse('reject')">Reject</button>
+  </div>
+</div>
+<script>
+  function handleResponse(choice) {
+    if (choice === 'accept') {
+      alert("🥰 You accepted! Thank you so much! 🥰");
+      window.open("https://forms.gle/CSHCmgzukWjUV2qD9", "_blank");
+    } else if (choice === 'reject') {
+      alert("💔 I respect your decision. Take care. 💔");
+    }
+  }
+</script>
+</body>
+</html>

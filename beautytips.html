@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beauty Tips</title>
+  <link rel="stylesheet" href="beautytips.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="shortcut icon" href="Logo.png">
+</head>
+<body>
+  <div class="container">
+    <h1 class="headline">DIY Beauty Tips</h1>
+    <a href="home.html" class="home-btn">🏠 Back to Home</a>
+
+    <div class="video-section fade-in">
+      <iframe 
+        width="100%" 
+        height="400" 
+        src="https://www.youtube.com/embed/opLLpoK2K_U?si=B9_0-PzYG78an8OF" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <section class="tips-section fade-in" id="hair">
+      <h2>Homemade Hair Masks</h2>
+      <img src="4 DIY Hair Masks with Essential Oils for Dry, Damaged Hair.jpg" alt="Hair Mask" class="section-img" />
+      <ul>
+        <li><strong>Banana & Honey:</strong> Moisturizes dry hair.</li>
+        <li><strong>Coconut Oil & Aloe Vera:</strong> Deep conditioning.</li>
+        <li><strong>Egg & Yogurt:</strong> Adds protein and shine.</li>
+        <li><strong>Avocado & Olive Oil:</strong> Repairs damage.</li>
+        <li><strong>Fenugreek & Curd:</strong> Helps with dandruff.</li>
+      </ul>
+    </section>
+
+    <section class="tips-section fade-in" id="face">
+      <h2>DIY Face Masks</h2>
+      <img src="Clear and Healthy Skin Tips No Pimples Fast_ TatianasPOV.jpg" alt="Face Mask" class="section-img" />
+      <ul>
+        <li><strong>Turmeric + Yogurt + Honey:</strong> Brightening mask.</li>
+        <li><strong>Oatmeal + Milk:</strong> Gentle exfoliation.</li>
+        <li><strong>Multani Mitti + Rose Water:</strong> Oil control.</li>
+        <li><strong>Cucumber + Aloe Vera:</strong> Soothing care.</li>
+        <li><strong>Charcoal + Gelatin:</strong> Blackhead removal.</li>
+      </ul>
+    </section>
+
+    <section class="tips-section fade-in" id="lip">
+      <h2>DIY Lip Care</h2>
+      <img src="Dry, Chapped Lips_ Try This!.jpg" alt="Lip Care" class="section-img" />
+      <ul>
+        <li><strong>Sugar + Honey:</strong> Natural lip scrub.</li>
+        <li><strong>Beetroot Juice:</strong> Lip tint.</li>
+        <li><strong>Ghee/Coconut Oil:</strong> Overnight softening.</li>
+        <li><strong>Rose Petal Paste:</strong> Brightens lips.</li>
+      </ul>
+    </section>
+
+    <section class="tips-section fade-in" id="body">
+      <h2>Homemade Body Scrubs</h2>
+      <img src="Cocoa Butter Coffee Scrub.jpg" alt="Body Scrub" class="section-img" />
+      <ul>
+        <li><strong>Coffee + Coconut Oil:</strong> Smoothens skin.</li>
+        <li><strong>Sugar + Olive Oil:</strong> Removes dead skin.</li>
+        <li><strong>Rice Flour + Yogurt:</strong> Brightening scrub.</li>
+      </ul>
+    </section>
+
+    <section class="tips-section fade-in" id="remedies">
+      <h2>Extra DIY Beauty Remedies</h2>
+      <img src="The Ultimate DIY Face Mask Guide - 50 Homemade Recipes!.jpg" alt="Remedies" class="section-img" />
+      <ul>
+        <li><strong>Green Tea Ice Cubes:</strong> Calms puffiness.</li>
+        <li><strong>Potato Juice:</strong> Reduces dark spots.</li>
+        <li><strong>Lemon + Honey:</strong> Natural tan remover.</li>
+        <li><strong>Apple Cider Vinegar:</strong> Skin pH toner (diluted).</li>
+        <li><strong>Aloe Vera Gel:</strong> For acne, sunburn, dryness.</li>
+      </ul>
+    </section>
+  </div>
+
+  <!--up button-->
+<div class="upbuttons">
+    <button id="goUp"><i class="fas fa-chevron-up"></i></button>
+</div>
+
+      <!-- Footer with Social Media Links -->
+      <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook-f"></i> <!-- Facebook icon -->
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+            </a>
+        </div>
+
+        <!-- Copyright Notice -->
+        <p>Copyright © 2025 LushAura. All Rights Reserved. By Shifa,Mithila & Oni.</p>
+    </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -100px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+    const goUpButton = document.getElementById('goUp');
+
+
+window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        goUpButton.style.display = "block";  // Show button
+    } else {
+        goUpButton.style.display = "none";   // Hide button when on top
+    }
+};
+    
+goUpButton.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+  </script>
+</body>
+</html>

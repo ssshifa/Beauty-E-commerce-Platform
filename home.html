@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="home.css">
+<link rel="shortcut icon" href="Logo.png">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
+</head>
+<body>
+    <nav class="navigation">
+        <a href="#" class="logo">
+            <img src="Logo.png" alt="Lush Aura"/>
+        </a>
+        <div class="nav-menu">
+            <a href="home.html" class="active">Home</a>
+            <a href="shop.html">Shop</a>
+            
+            <div class="dropdown" >
+                <a href="#">Categories <!--<i class="fas fa-caret-down"></i>--></a>
+                <div class="dropdown-menu" >
+                    <ul>
+
+                        <li><a href="#brandSection">Brands</a></li>
+                        <li><a href="beautytips.html">Beauty Tips</a></li>
+                        <li><a href="#">Clearance Sale</a></li>
+                        <li><a href="#">New Arrival</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <a href="contactuspage.html">Contact Us</a>
+        </div>
+        
+        <form class="search-box">
+            <input type="text" placeholder="Search..." required/>
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        
+        <div class="nav-buttons">
+            <a href="login.html" class="nav-user">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <a href="#" class="nav-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+    </nav>
+    
+<!--image slider-->
+<div class="slider">
+    <div class="list">
+        <div class="item">
+            <img src="Glow beyond limits with LushAura.png">
+        </div>
+        <div class="item">
+            <img src="slide1.jpg">
+        </div>
+        <div class="item">
+            <img src="glowrecipe.jpg">
+        </div>
+        <div class="item">
+            <img src="slide3.jpg">
+        </div>
+    </div>
+<!--buttons-->
+<div class="buttons">
+    <button id="prev"><</button>
+    <button id="next">></button>
+</div>
+
+<!--dots-->
+<ul class="dots">
+    <li class="active"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</div>
+
+<!--category section-->
+<section class="category" id="brandSection">
+    <h2 class="category-title">Shop Top Brands</h2>
+        <div class="box-container">
+            <a href="rarebeauty.html" class="box">
+                <img src="brand1.jpg">
+                <h3>Rare Beauty</h3>
+            </a>
+
+            <a href="flowerknows.html" class="box">
+                <img src="banner1.jpg">
+                <h3>Flower Knows</h3>
+            </a>
+            <a href="kyliecos.html" class="box">
+                <img src="brand2.jpg">
+                <h3>Kylie Cosmetics</h3>
+            </a>
+
+            <a href="theordinary.html" class="box">
+                <img src="brand4.jpg">
+                <h3>The Ordinary</h3>
+            </a>
+            
+            <a href="glowrecipe.html" class="box">
+                <img src="brand6.jpeg">
+                <h3>Glow Recipe</h3>
+            </a>
+
+            <a href="beautyofjoseon.html" class="box">
+                <img src="brand5.jpeg">
+                <h3>Beauty Of Joseon</h3>
+            </a>
+
+            
+        
+
+    </div>
+</section>
+
+<!--Tips Banner-->
+
+<section class="tips" id="tips">
+    <div class="container tips-container">
+        <div class="left">
+            <div class="content">
+                <p>"Looking for natural ways to enhance your beauty? 
+                    Whether it’s glowing skin, silky hair, or deep hydration, 
+                    our DIY beauty tips have got you covered!
+                    Explore the best homemade remedies!"</p>
+                    <a href="beautytips.html">
+                        <button class="btn">Learn more</button>
+                    </a>
+                    
+            </div>
+        </div>
+        <div class="right">
+            <div class="image">
+                <img src="diy.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--up button-->
+<div class="upbuttons">
+    <button id="goUp"><i class="fas fa-chevron-up"></i></button>
+</div>
+
+<!--AOS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<!--Best Seller Section-->
+<h2 class="section-title" data-aos="fade-up" data-aos-duration="2000">Best Sellers</h2>
+<section class="best-seller">
+    
+    <div data-aos="fade-right" data-aos-duration="3000" class="bestsellers">
+        <div class="best-seller-img">
+            <img src="bestseller1.jpg" alt="">
+        </div>
+        <div class="product-info"> 
+            <h3>SHEGLAM</h3>
+            <p>
+                SHEGLAM Dynamatte Boom Long Lasting Matte Lipstick
+            </p>
+            <a href="#">Add To Cart</a>
+        </div>
+    </div>
+
+    <div class="bestsellers">
+        <div class="best-seller-img">
+            <img src="bestseller2.jpg" alt="">
+        </div>
+        <div class="product-info"> 
+            <h3>MIELLE</h3>
+            <p>
+                Mielle Rosemary Mint Scalp & Hair Strengthening Oil
+            </p>
+            <a href="#">Add To Cart</a>
+        </div>
+    </div>
+
+    <div data-aos="fade-left" data-aos-duration="3000" class="bestsellers">
+        <div class="best-seller-img">
+            <img src="bestseller3.jpg" alt="">
+        </div>
+        <div class="product-info"> 
+            <h3>CERAVE</h3>
+            <p>
+                CeraVe Hydrating Facial Cleanser
+            </p>
+            <a href="#">Add To Cart</a>
+        </div>
+    </div>
+     </section>
+
+
+<!--Customer Review Section-->
+<section class="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="review-slide">
+                    <p>
+                        "Absolutely love the quality and packaging!  
+                        Will definitely be ordering again."
+                    </p>
+                    <div class="review-profile">
+                        <img src="review1 (1).jpg" alt="">
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-alt"></i> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="review-slide">
+                    <p>
+                        "Great quality! But delivery time could be more improved!"
+                    </p>
+                    <div class="review-profile">
+                        <img src="review1 (3).jpg" alt="">
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-alt"></i> 
+                            <i class="fa fa-star-half-alt"></i> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="review-slide">
+                    <p>
+                        "Fast delivery and great service. Highly recommend!"
+                    </p>
+                    <div class="review-profile">
+                        <img src="review1 (2).jpg" alt="">
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="review-slide">
+                    <p>
+                        "Amazing service! I’ve seen results after a few weeks."
+                    </p>
+                    <div class="review-profile">
+                        <img src="review1 (4).jpg" alt="">
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>                          
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-alt"></i> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="next"><i class="fa-solid fa-chevron-right"></i></div>
+        <div class="prev"><i class="fa-solid fa-chevron-left"></i></div>
+    </div>
+</section>
+
+<!--Footer secion-->
+<footer>
+    <div class="newsletter">
+        <div class="newsletter-form">
+            <h3><i class="fa-solid fa-envelope"></i><span> Subsribe To Newsletter</span></h3>
+            <div>
+                <form action="#">
+                    <input type="text" id="name" name="name" placeholder="Enter Your Name">
+                    <input type="email" id="mail" name="mail" placeholder="Enter Your Email">
+                    <button><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="newsletter-img">
+            <img src="footer.jpg" alt="">
+        </div>
+    </div>
+    <div class="footer-main">
+        <h3>LushAura.</h3>
+        <div class="footer-list">
+            <div class="footer-main-info">
+                <p>Glow Beyond Limits!</p>
+                <div class="footer-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="links">
+                <div class="links1">
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="blog.html">Beauty Tips</a></li>
+                        <li><a href="contactuspage.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ <div class="footer-bottom">
+    <p>
+        Copyright © 2025 LushAura. All Rights Reserved. By Shifa,Mithila & Oni.
+    </p>
+    <div>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy & Policy</a>
+    </div>
+ </div>
+</footer>
+
+
+
+<script src="jscript.js"></script>
+<script>
+    AOS.init();
+</script>
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.next',
+                prevEl: '.prev'
+            },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+            }
+        });
+    </script>
+
+    
+</body>
+</html>
